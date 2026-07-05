@@ -74,6 +74,8 @@
     spotify
     discord
     kitty
+    fish
+    alsa-utils
     inputs.helium.packages.${pkgs.system}.default
   ];
 
