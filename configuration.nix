@@ -20,7 +20,7 @@
   boot.loader.efi.canTouchEfiVariables = true;
 
   # Use latest kernel.
-  boot.kernelPackages = pkgs.linuxPackages_latest;
+  boot.kernelPackages = pkgs.linuxPackages_zen;
 
   networking.hostName = "nixos"; # Define your hostname.
 
@@ -88,9 +88,11 @@
     spotify
     discord
     haruna
+    obsidian
     kitty
     fish
     alsa-utils
+    telegram-desktop
     inputs.helium.packages.${pkgs.system}.default
   ];
 
