@@ -4,10 +4,11 @@
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
     helium.url = "github:schembriaiden/helium-browser-nix-flake";
+    pano-scrobbler-flake.url = "github:kawaiiDango/pano-scrobbler-flake";
     helium.inputs.nixpkgs.follows = "nixpkgs";
   };
 
-  outputs = { self, nixpkgs, helium, ... }@inputs: {
+  outputs = { self, nixpkgs, helium, pano-scrobbler-flake, ... }@inputs: {
     nixosConfigurations = {
       nixos = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";

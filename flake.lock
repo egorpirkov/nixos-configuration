@@ -37,10 +37,45 @@
         "type": "github"
       }
     },
+    "nixpkgs_2": {
+      "locked": {
+        "lastModified": 1782723713,
+        "narHash": "sha256-oPXCU/SSUokcGaJREHibG1CBX3+s/W7orDWQOZDsEeQ=",
+        "owner": "nixos",
+        "repo": "nixpkgs",
+        "rev": "b5aa0fbd538984f6e3d201be0005b4463d8b09f8",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nixos",
+        "ref": "nixos-unstable",
+        "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
+    "pano-scrobbler-flake": {
+      "inputs": {
+        "nixpkgs": "nixpkgs_2"
+      },
+      "locked": {
+        "lastModified": 1782852092,
+        "narHash": "sha256-fvKQjYeGrz6RZjdA3IIeYCHW7NsCfFeg91HSEEGhAVs=",
+        "owner": "kawaiiDango",
+        "repo": "pano-scrobbler-flake",
+        "rev": "f7d803065ab68c34ae85c73e965d5088c300d83c",
+        "type": "github"
+      },
+      "original": {
+        "owner": "kawaiiDango",
+        "repo": "pano-scrobbler-flake",
+        "type": "github"
+      }
+    },
     "root": {
       "inputs": {
         "helium": "helium",
-        "nixpkgs": "nixpkgs"
+        "nixpkgs": "nixpkgs",
+        "pano-scrobbler-flake": "pano-scrobbler-flake"
       }
     },
     "systems": {

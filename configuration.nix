@@ -94,6 +94,7 @@
     alsa-utils
     telegram-desktop
     inputs.helium.packages.${pkgs.system}.default
+    inputs.pano-scrobbler-flake.packages.${pkgs.system}.default
   ];
 
   # This option defines the first version of NixOS you have installed on this particular machine
