@@ -87,6 +87,7 @@
     fastfetch
     spotify
     discord
+    haruna
     kitty
     fish
     alsa-utils
