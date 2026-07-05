@@ -51,13 +51,27 @@
     pulse.enable = true;
   };
 
+  hardware.alsa.enablePersistence = true;
+
+  programs.fish = {
+  enable = true;
+  
+  interactiveShellInit = ''
+    set fish_greeting # Disable greeting
+    fastfetch
+  '';
+
+  shellAliases = {
+    nixconf = "sudo vim /etc/nixos/configuration.nix";
+    nix-switch = "sudo nixos-rebuild switch --flake /etc/nixos/#nixos";
+  };
+};
+
   # Define a user account. Don't forget to set a password with ‘passwd’
   users.users.pirkov = {
     isNormalUser = true;
     extraGroups = [ "wheel" ]; # Enable ‘sudo’ for the user
-    packages = with pkgs; [
-      tree
-    ];
+    shell = pkgs.fish;
   };
 
 
