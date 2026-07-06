@@ -7,7 +7,7 @@
     inputs.plasma-manager.homeModules.plasma-manager
   ];
 
-  home.file.".local/share/color-schemes/VladGruvbox.colors".source = ./MaterialYouDark.colors;
+  home.file.".local/share/color-schemes/MaterialYouDark.colors".source = ./MaterialYouDark.colors;
 
   home.username="pirkov";
   home.homeDirectory = "/home/pirkov";
@@ -27,14 +27,15 @@
      enable = true;
 
      workspace = {
-	  iconTheme = "Gruvbox Plus Dark";
+	  iconTheme = "Gruvbox-Plus-Dark";
 	  colorScheme = "MaterialYouDark";
-	  lookAndFeel = "org.kde.breezedark.desktop";
-	  cursorTheme = "Breeze_Dark";
+	  cursor = {
+		theme = "Breeze_Dark";
+	};
 	  splashScreen.theme = "org.kde.breeze.desktop";
 	};
 
-     files = {
+     configFile = {
       "kdeglobals" = {
         "KDE" = { "widgetStyle" = "Breeze"; };
         "Sounds" = { "Theme" = "freedesktop"; };
@@ -42,8 +43,8 @@
       
       "kwinrc" = {
         "org.kde.kdecoration2" = {
-          "library" = "org.kde.kwin.aurorae";
-          "theme" = "Breeze";
+          "library" = "org.kde.breeze";
+          "theme" = "breeze";
         };
       };
     };
@@ -55,7 +56,7 @@
       };
 
       "org.kde.krunnerrunnotregisteredcustomcommands" = {
-        "kitty.desktop" = "Meta+Return";
+        "kitty" = "Meta+Return";
       };
 
       "mediacontrol" = {
