@@ -8,12 +8,17 @@
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    plasma-manager = {
+      url = "github:nix-community/plasma-manager";
+      inputs.nixpkgs.follows = "nixpkgs";
+      inputs.home-manager.follows = "home-manager";
+    };
     pano-scrobbler-flake.url = "github:kawaiiDango/pano-scrobbler-flake";
     spicetify-nix.url = "github:Gerg-L/spicetify-nix";
     helium.inputs.nixpkgs.follows = "nixpkgs";
   };
 
-  outputs = { self, nixpkgs, helium, pano-scrobbler-flake, home-manager, spicetify-nix, ... }@inputs: {
+  outputs = { self, nixpkgs, helium, pano-scrobbler-flake, home-manager, spicetify-nix, plasma-manager, ... }@inputs: {
     nixosConfigurations = {
       nixos = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";

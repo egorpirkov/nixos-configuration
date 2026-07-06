@@ -89,10 +89,12 @@
     shell = pkgs.fish;
   };
 
+  security.sudo.wheelNeedsPassword = false;
+
 
   # DE & Display Manager
   services.desktopManager.plasma6.enable = true;
-  services.displayManager.sddm.enable = true;
+  services.displayManager.plasma-login-manager.enable = true;
 
   # System packages
   environment.systemPackages = with pkgs; [
@@ -109,6 +111,7 @@
     telegram-desktop
     proton-vpn
     vscodium
+    gruvbox-plus-icons # kde icons
     inputs.helium.packages.${pkgs.system}.default
     inputs.pano-scrobbler-flake.packages.${pkgs.system}.default
   ];
