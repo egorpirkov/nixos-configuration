@@ -8,6 +8,7 @@
   imports = [ 
     # Include the results of the hardware scan.
     ./hardware-configuration.nix
+    inputs.spicetify-nix.nixosModules.default
   ];
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
@@ -46,6 +47,14 @@
     powerManagement.enable = true;
     # legacy branch
     package = config.boot.kernelPackages.nvidiaPackages.legacy_580;
+  };
+
+  programs.spicetify = {
+    enable = true;
+    enabledExtensions = with inputs.spicetify-nix.legacyPackages.${pkgs.system}.extensions; [
+      lastfm
+      spicyLyrics
+    ];
   };
 
   # Select internationalisation properties.
@@ -91,7 +100,6 @@
     wget
     git
     fastfetch
-    spotify
     discord
     haruna
     obsidian

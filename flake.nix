@@ -9,10 +9,11 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     pano-scrobbler-flake.url = "github:kawaiiDango/pano-scrobbler-flake";
+    spicetify-nix.url = "github:Gerg-L/spicetify-nix";
     helium.inputs.nixpkgs.follows = "nixpkgs";
   };
 
-  outputs = { self, nixpkgs, helium, pano-scrobbler-flake, home-manager, ... }@inputs: {
+  outputs = { self, nixpkgs, helium, pano-scrobbler-flake, home-manager, spicetify-nix, ... }@inputs: {
     nixosConfigurations = {
       nixos = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
