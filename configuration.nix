@@ -19,6 +19,11 @@
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
+  boot.kernelParams = [
+   "nvidia-drm.modeset=1"
+   "nvidia-drm.fbdev=1"
+	];
+
   # Use latest kernel.
   boot.kernelPackages = pkgs.linuxPackages_zen;
 
@@ -38,6 +43,7 @@
   hardware.nvidia = {
     open = false;
     modesetting.enable = true;
+    powerManagement.enable = true;
     # legacy branch
     package = config.boot.kernelPackages.nvidiaPackages.legacy_580;
   };
