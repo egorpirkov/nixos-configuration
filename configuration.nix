@@ -94,6 +94,7 @@
     alsa-utils
     telegram-desktop
     proton-vpn
+    vscodium
     inputs.helium.packages.${pkgs.system}.default
     inputs.pano-scrobbler-flake.packages.${pkgs.system}.default
   ];
