@@ -1,0 +1,23 @@
+
+{ config, pkgs, ... }:
+
+{
+
+  home.username="pirkov";
+  home.homeDirectory = "/home/pirkov";
+  
+  programs.kitty = {
+    enable = true;   
+    settings = {
+      background = "#151313";
+      foreground = "#e8e1e1";
+      background_opacity = "0.66";
+      background_blur = 1;
+      hide_window_decorations = "yes";
+    };
+  };
+
+  programs.home-manager.enable = true;
+
+  home.stateVersion = "26.05";
+}
