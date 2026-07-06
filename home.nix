@@ -26,6 +26,13 @@
   programs.plasma = {
      enable = true;
 
+      powerdevil.AC = {
+    autoSuspend = {
+      action = "nothing";  # Запрещает засыпать при бездействии
+      idleTimeout = null;   # Отключает таймер ожидания
+    };
+  };
+
      workspace = {
 	  iconTheme = "Gruvbox-Plus-Dark";
 	  colorScheme = "MaterialYouDark";
