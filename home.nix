@@ -47,8 +47,15 @@
           "library" = "org.kde.breeze";
           "theme" = "breeze";
         };
+
+        "Effect-overview" = {
+          "BorderActivate" = 9;
       };
+     };
     };
+
+     
+
 
      shortcuts = {
       "kwin" = {
@@ -66,9 +73,6 @@
         "previousmedia" = "Print";
       };
     };
-
-
-
 
 	};
 
