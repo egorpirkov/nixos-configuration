@@ -33,6 +33,7 @@
 		theme = "Breeze_Dark";
 	};
 	  splashScreen.theme = "org.kde.breeze.desktop";
+	  wallpaper = ./wallpaper.png;
 	};
 
      configFile = {
