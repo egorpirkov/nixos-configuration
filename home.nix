@@ -28,8 +28,8 @@
 
       powerdevil.AC = {
     autoSuspend = {
-      action = "nothing";  # Запрещает засыпать при бездействии
-      idleTimeout = null;   # Отключает таймер ожидания
+      action = "nothing";
+      idleTimeout = null;
     };
   };
 
