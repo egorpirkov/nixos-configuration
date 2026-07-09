@@ -108,7 +108,8 @@
     kitty
     fish
     alsa-utils
-    telegram-desktop
+    ayugram-desktop
+    yt-dlp
     proton-vpn
     vscodium
     gruvbox-plus-icons # kde icons
