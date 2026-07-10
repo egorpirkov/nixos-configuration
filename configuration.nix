@@ -111,6 +111,8 @@
     ayugram-desktop
     yt-dlp
     proton-vpn
+    nicotine-plus
+    qbittorrent
     vscodium
     gruvbox-plus-icons # kde icons
     inputs.helium.packages.${pkgs.system}.default
