@@ -108,6 +108,7 @@
     kitty
     fish
     alsa-utils
+    kid3-kde
     ayugram-desktop
     yt-dlp
     proton-vpn
