@@ -12,6 +12,9 @@
   ];
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
+  
+
+  environment.sessionVariables = { };
 
   # Allow unfree software
   nixpkgs.config.allowUnfree = true;
@@ -38,6 +41,7 @@
 
   # nvidia drivers
   hardware.graphics.enable = true;
+  hardware.graphics.enable32Bit = true;
 
   services.xserver.videoDrivers = [ "nvidia" ];
 
@@ -103,6 +107,7 @@
     git
     fastfetch
     discord
+    steam
     haruna
     obsidian
     kitty
