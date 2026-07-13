@@ -103,11 +103,13 @@
   # System packages
   environment.systemPackages = with pkgs; [
     vim
+    antigravity-cli
     wget
     git
     fastfetch
     discord
     steam
+    osu-lazer-bin
     haruna
     obsidian
     kitty
