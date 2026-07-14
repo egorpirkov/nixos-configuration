@@ -107,7 +107,7 @@
     wget
     git
     fastfetch
-    discord
+    vesktop
     steam
     osu-lazer-bin
     haruna
