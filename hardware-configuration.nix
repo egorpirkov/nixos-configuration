@@ -24,11 +24,6 @@
       options = [ "fmask=0077" "dmask=0077" ];
     };
 
-  fileSystems."/mnt/HDD" =
-    { device = "/dev/disk/by-uuid/54164484164468D6";
-      fsType = "ntfs3";
-    };
-
   swapDevices =
     [ { device = "/dev/disk/by-uuid/a0bd4f71-bd89-4a5b-9215-de80d74a1edb"; }
     ];

@@ -16,6 +16,12 @@
 
   environment.sessionVariables = { };
 
+  fileSystems."/mnt/HDD" =
+    { device = "/dev/disk/by-uuid/54164484164468D6";
+      fsType = "ntfs3";
+      options = [ "uid=1000" "gid=100" "dmask=0022" "fmask=0022" "nofail" ];
+    };
+
   # Allow unfree software
   nixpkgs.config.allowUnfree = true;
 
