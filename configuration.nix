@@ -25,6 +25,11 @@
   # Allow unfree software
   nixpkgs.config.allowUnfree = true;
 
+
+  
+  virtualisation.virtualbox.host.enable = true;
+  users.extraGroups.vboxusers.members = [ "user-with-access-to-virtualbox" ];
+
   # Use the systemd-boot EFI boot loader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
@@ -96,7 +101,9 @@
   # Define a user account. Don't forget to set a password with ‘passwd’
   users.users.pirkov = {
     isNormalUser = true;
-    extraGroups = [ "wheel" ]; # Enable ‘sudo’ for the user
+    extraGroups = [ "wheel" 
+		    "vboxusers"
+		  		];
     shell = pkgs.fish;
   };
 
