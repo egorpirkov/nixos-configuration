@@ -117,8 +117,7 @@
   # System packages
   environment.systemPackages = with pkgs; [
     vim
-    k3s
-    kubernetes-helm
+    obs-studio
     antigravity-cli
     wget
     git
